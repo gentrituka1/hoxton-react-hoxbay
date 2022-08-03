@@ -204,10 +204,10 @@ img {
   place-content: center;
 }
 
-.categories-container__list a {
+.category-item {
   display: grid;
   height: 300px;
-  background-color: var(--random-colour);
+  background-color: lightblue;
   place-items: center;
   text-transform: capitalize;
   text-align: center;
@@ -215,7 +215,7 @@ img {
   font-size: 2.5rem;
 }
 
-.categories-container__list a:hover {
+.category-item:hover {
   color: var(--random-colour);
   border: 2px solid var(--random-colour);
   background-color: var(--white);
