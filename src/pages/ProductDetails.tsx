@@ -31,7 +31,9 @@ export function ProductDetails() {
         <h2>{item.title}</h2>
         <h3>{item.description}</h3>
         <p>${item.price}</p>
-        <button>
+        <button onClick={() => {
+            
+        }}>
           <Link to={`/basket`}>Add to basket</Link>
         </button>
       </div>
