@@ -20,11 +20,11 @@ export function Categories(){
         <div className="categories-container">
             <ul className="categories-container__list">
                 {categories.map(category => (
+                    <Link to={`/categories/${category.id}`}>
                     <a className="category-item">
-                        <Link to={`/categories/${category.id}`}>
-                            <h3>{category.name}</h3>
-                        </Link>
+                        {category.name}
                     </a>
+                    </Link>
                 ))}
             </ul>
         </div>
