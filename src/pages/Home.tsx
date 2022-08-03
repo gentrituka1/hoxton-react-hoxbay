@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-type productItem = {
+export type productItem = {
     id: number,
     title: string,
     price: number,
