@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
+import { Basket } from './pages/Basket'
 import { Home } from './pages/Home'
 
 function App() {
@@ -10,8 +11,8 @@ function App() {
         <Routes>
           <Route index element={<Navigate to="/products"/>} />
           <Route path="/products" element={<Home />} />
-          {/* <Route path="/categories" element={} />
-          <Route path="/basket" element={} /> */}
+          {/* <Route path="/categories" element={} /> */}
+          <Route path="/basket" element={<Basket />} />
         </Routes>
       </main>
     </>
