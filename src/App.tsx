@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import { Basket } from "./pages/Basket";
@@ -5,8 +6,10 @@ import { Categories } from "./pages/Categories";
 import { CategoriesItems } from "./pages/CategoriesItems";
 import { Home } from "./pages/Home";
 import { ProductDetails } from "./pages/ProductDetails";
+import {basketItem} from "./pages/Basket";
 
 function App() {
+
   return (
     <>
       <Header />
