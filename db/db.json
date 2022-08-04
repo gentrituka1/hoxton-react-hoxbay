@@ -20,27 +20,19 @@
   "basket": [
     {
       "productId": 2,
-      "quantity": 1,
+      "quantity": 19,
       "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
       "title": "Mens Casual Premium Slim Fit T-Shirts ",
       "price": 22.3,
       "id": 1
     },
     {
-      "productId": 3,
-      "quantity": 2,
-      "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-      "title": "Mens Cotton Jacket",
-      "price": 55.99,
-      "id": 2
-    },
-    {
-      "productId": 3,
-      "quantity": 1,
-      "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-      "title": "Mens Cotton Jacket",
-      "price": 55.99,
-      "id": 4
+      "productId": 5,
+      "quantity": 3,
+      "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+      "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+      "price": 695,
+      "id": 5
     }
   ],
   "products": [

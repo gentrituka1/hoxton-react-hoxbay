@@ -47,7 +47,7 @@ export function ProductDetails() {
                         quantity: 1,
                         image: item.image,
                         title: item.title,
-                        price: item.price
+                        price: item.price.toFixed(2)
                     })
                 })
                 .then(response => response.json())
