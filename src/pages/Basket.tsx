@@ -23,7 +23,7 @@ export function Basket() {
     for (let item of basket) {
       total += item.price * item.quantity;
     }
-    return total;
+    return total.toFixed(2);
   }
 
   return (
@@ -63,8 +63,6 @@ export function Basket() {
                         )
 
                     console.log(event.target.value)
-
-
                 }}
                 >
                 {Array(product.quantity + 6).fill(null).map((item, index) => <option>{index}</option>)}

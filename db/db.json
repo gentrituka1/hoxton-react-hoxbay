@@ -20,7 +20,7 @@
   "basket": [
     {
       "productId": 2,
-      "quantity": 0,
+      "quantity": 1,
       "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
       "title": "Mens Casual Premium Slim Fit T-Shirts ",
       "price": 22.3,
@@ -28,11 +28,27 @@
     },
     {
       "productId": 5,
-      "quantity": 3,
+      "quantity": 1,
       "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
       "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
       "price": 695,
       "id": 5
+    },
+    {
+      "productId": 2,
+      "quantity": 1,
+      "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+      "title": "Mens Casual Premium Slim Fit T-Shirts ",
+      "price": "22.30",
+      "id": 6
+    },
+    {
+      "productId": 11,
+      "quantity": 1,
+      "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+      "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+      "price": "109.00",
+      "id": 7
     }
   ],
   "products": [
