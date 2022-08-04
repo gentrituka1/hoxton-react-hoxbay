@@ -51,8 +51,6 @@ export function Basket() {
                             })
                             .then(response => response.json())
                             .then(basketItem => setBasket([...basket, basketItem]))
-
-                            
                         }
                         }> {product.quantity} ⮟</button>
                     </div>
