@@ -6,7 +6,7 @@ import { Categories } from "./pages/Categories";
 import { CategoriesItems } from "./pages/CategoriesItems";
 import { Home } from "./pages/Home";
 import { ProductDetails } from "./pages/ProductDetails";
-import {basketItem} from "./pages/Basket";
+import { NotFound } from "./pages/NotFound";
 
 function App() {
 
@@ -21,6 +21,7 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/categories/:id" element={<CategoriesItems />} />
           <Route path="/basket" element={<Basket />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </>
