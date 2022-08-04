@@ -38,7 +38,21 @@ export function Basket() {
                     <h3>{product.title}</h3>
                     <div className="quantity">
                         <p>Qty:</p>
-                        <button className="btn-size"> {product.quantity} ⮟</button>
+                        <button className="btn-size" onClick={ () => {
+
+                            fetch(`http://localhost:4000/basket/${product.id}`, {
+                                method: "PATCH",
+                                headers: {
+                                    "Content-Type": "application/json"
+                                },
+                                body: JSON.stringify({
+                                    quantity: product.quantity + 1
+                                })
+                            })
+                            .then(response => response.json())
+                            .then(basketItem => setBasket([...basket, basketItem]))
+                        }
+                        }> {product.quantity} ⮟</button>
                     </div>
                     <div>
                         <p>Item Total</p>
@@ -52,7 +66,3 @@ export function Basket() {
     </div>
   );
 }
-function setBasket(basketFromServer: any): any {
-    throw new Error("Function not implemented.");
-}
-
