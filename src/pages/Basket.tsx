@@ -31,13 +31,13 @@ export function Basket() {
       <h2>Your Basket</h2>
       <ul>
         {basket.map((product) => (
-          <li>
+          <li key={product.id}>
             <div className="basket-container__item">
               <img src={product.image} />
               <h3>{product.title}</h3>
               <div className="quantity">
                 <p>Qty:</p>
-                <button
+                <select
                   className="btn-size"
                   onClick={() => {
                     fetch(`http://localhost:4000/basket/${product.id}`, {
@@ -50,11 +50,20 @@ export function Basket() {
                       }),
                     })
                       .then((response) => response.json())
-                      .then((basketItem) => setBasket([...basket, basketItem]));
-                  }}
+                      .then((basketItem) => {
+
+                       let itemCopy = structuredClone(basket)
+
+                       let product = itemCopy.find(item => item.id === basketItem.id)
+
+                       product.quantity++;
+
+                        setBasket(itemCopy)
+                      }
+                        )}}
                 >
-                  {product.quantity} ⮟
-                </button>
+                  {product.quantity}
+                </select>
               </div>
               <div>
                 <p>Item Total</p>
