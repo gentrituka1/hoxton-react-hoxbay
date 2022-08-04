@@ -38,31 +38,36 @@ export function Basket() {
               <div className="quantity">
                 <p>Qty:</p>
                 <select
-                  className="btn-size"
-                  onClick={() => {
+                    value={product.quantity}
+                  onChange={(event) => {
                     fetch(`http://localhost:4000/basket/${product.id}`, {
                       method: "PATCH",
                       headers: {
                         "Content-Type": "application/json",
                       },
                       body: JSON.stringify({
-                        quantity: product.quantity + 1,
+                        quantity: Number(event.target.value),
                       }),
                     })
                       .then((response) => response.json())
                       .then((basketItem) => {
 
-                       let itemCopy = structuredClone(basket)
+                       let basketCopy = structuredClone(basket)
 
-                       let product = itemCopy.find(item => item.id === basketItem.id)
+                       let product = basketCopy.find(item => item.id === basketItem.id)
 
-                       product.quantity++;
+                       product.quantity = basketItem.quantity
 
-                        setBasket(itemCopy)
+                        setBasket(basketCopy)
                       }
-                        )}}
+                        )
+
+                    console.log(event.target.value)
+
+
+                }}
                 >
-                  {product.quantity}
+                {Array(product.quantity + 6).fill(null).map((item, index) => <option>{index}</option>)}
                 </select>
               </div>
               <div>
