@@ -8,24 +8,24 @@ function Header() {
       className="header"
       style={{
         // @ts-ignore
-        ["--border-colour"]: randomColor
+        ["--border-colour"]: randomColor,
       }}
     >
       <Link to="/products">
-      <div className="header__logo" style={{ color: randomColor }}>
-        Hoxbay
-      </div>
+        <div className="header__logo" style={{ color: randomColor }}>
+          Hoxbay
+        </div>
       </Link>
       <nav className="header__nav">
         <ul>
           <li>
-          <Link to="/products">Home</Link>
+            <Link to="/products">Home</Link>
           </li>
           <li>
-          <Link to="/categories">Categories</Link>
+            <Link to="/categories">Categories</Link>
           </li>
           <li>
-          <Link to="/basket">Basket</Link>
+            <Link to="/basket">Basket</Link>
           </li>
         </ul>
       </nav>
