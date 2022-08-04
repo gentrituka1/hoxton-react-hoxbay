@@ -11,9 +11,11 @@ function Header() {
         ["--border-colour"]: randomColor
       }}
     >
+      <Link to="/products">
       <div className="header__logo" style={{ color: randomColor }}>
         Hoxbay
       </div>
+      </Link>
       <nav className="header__nav">
         <ul>
           <li>
