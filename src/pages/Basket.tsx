@@ -52,6 +52,8 @@ export function Basket() {
                       .then((response) => response.json())
                       .then((basketItem) => {
 
+
+
                        let basketCopy = structuredClone(basket)
 
                        let product = basketCopy.find(item => item.id === basketItem.id)
@@ -59,8 +61,7 @@ export function Basket() {
                        product.quantity = basketItem.quantity
 
                         setBasket(basketCopy)
-                      }
-                        )
+                      })
 
                     console.log(event.target.value)
                 }}
