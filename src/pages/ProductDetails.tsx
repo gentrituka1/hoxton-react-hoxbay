@@ -31,11 +31,11 @@ export function ProductDetails() {
         <h2>{item.title}</h2>
         <h3>{item.description}</h3>
         <p>${item.price}</p>
-        <button onClick={() => {
-            
-        }}>
-          <Link to={`/basket`}>Add to basket</Link>
-        </button>
+        <Link to={`/basket`}>
+            <button>
+                Add to basket
+            </button>
+        </Link>
       </div>
     </div>
   );
