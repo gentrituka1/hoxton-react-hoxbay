@@ -38,7 +38,17 @@ export function Basket() {
               <div className="quantity">
                 <p>Qty:</p>
                 <select
-                    value={product.quantity}
+                  value={product.quantity === 0 ?
+                    
+                    fetch(`http://localhost:4000/basket/${product.id}`, {
+                      method: "DELETE"
+                    })
+                    .then(response => response.json())
+                    .then(() => setBasket(basket.filter(item => item.quantity !== 0)))
+
+                    : product.quantity}
+                
+
                   onChange={(event) => {
                     fetch(`http://localhost:4000/basket/${product.id}`, {
                       method: "PATCH",
@@ -51,27 +61,30 @@ export function Basket() {
                     })
                       .then((response) => response.json())
                       .then((basketItem) => {
+                        let basketCopy = structuredClone(basket);
 
+                        let product = basketCopy.find(
+                          (item) => item.id === basketItem.id
+                        );
 
+                        product.quantity = basketItem.quantity;
 
-                       let basketCopy = structuredClone(basket)
+                        setBasket(basketCopy);
+                      });
 
-                       let product = basketCopy.find(item => item.id === basketItem.id)
-
-                       product.quantity = basketItem.quantity
-
-                        setBasket(basketCopy)
-                      })
-
-                    console.log(event.target.value)
-                }}
+                    console.log(event.target.value);
+                  }}
                 >
-                {Array(product.quantity + 6).fill(null).map((item, index) => <option>{index}</option>)}
+                  {Array(product.quantity + 6)
+                    .fill(null)
+                    .map((item, index) => (
+                      <option>{index}</option>
+                    ))}
                 </select>
               </div>
               <div>
                 <p>Item Total</p>
-                <p>${product.price * product.quantity}</p>
+                <p>${(product.price * product.quantity).toFixed(2)}</p>
               </div>
             </div>
           </li>

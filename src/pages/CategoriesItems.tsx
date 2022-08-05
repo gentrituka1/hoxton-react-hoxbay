@@ -30,7 +30,7 @@ export function CategoriesItems() {
       <ul className="products-container">
         {inCategories.map((item) => (
           <li className="products-container__list">
-            <Link to={`/home/${item.id}`}>
+            <Link to={`/products/${item.id}`}>
               <div className="product-item">
                 <img src={item.image} />
                 <h3>{item.title}</h3>
