@@ -26,15 +26,13 @@ export function CategoriesItems() {
 
   if (inCategories === null) return <div>Loading...</div>;
   return (
-    <div>
-      <ul className="products-container">
+    <div className="products-container">
+      <ul className="products-container__list">
         {inCategories.map((item) => (
-          <li className="products-container__list">
+          <li className="product-item">
             <Link to={`/products/${item.id}`}>
-              <div className="product-item">
-                <img src={item.image} />
-                <h3>{item.title}</h3>
-              </div>
+              <img src={item.image} />
+              <h3>{item.title}</h3>
             </Link>
           </li>
         ))}
