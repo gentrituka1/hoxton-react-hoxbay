@@ -35,7 +35,7 @@ export function ProductDetails() {
         <h2>{item.title}</h2>
         <h3>{item.description}</h3>
         <p>${item.price}</p>
-        <Link to={`/basket`}>
+        
             <button onClick={() => {
                 fetch(`http://localhost:4000/basket`, {
                     method: "POST",
@@ -53,8 +53,12 @@ export function ProductDetails() {
                 .then(response => response.json())
                 .then(basketItem => setBasket([...basket, basketItem]))
                 .then(() => window.location.reload())
-            }}>Add to basket</button>
-        </Link>
+            }}>
+                <Link to={`/basket`}>
+                     Add to basket
+                </Link>
+              </button>
+        
       </div>
     </div>
   );
