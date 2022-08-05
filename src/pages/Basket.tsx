@@ -38,17 +38,19 @@ export function Basket() {
               <div className="quantity">
                 <p>Qty:</p>
                 <select
-                  value={product.quantity === 0 ?
-                    
-                    fetch(`http://localhost:4000/basket/${product.id}`, {
-                      method: "DELETE"
-                    })
-                    .then(response => response.json())
-                    .then(() => setBasket(basket.filter(item => item.quantity !== 0)))
-
-                    : product.quantity}
-                
-
+                  value={
+                    product.quantity === 0
+                      ? fetch(`http://localhost:4000/basket/${product.id}`, {
+                          method: "DELETE",
+                        })
+                          .then((response) => response.json())
+                          .then(() =>
+                            setBasket(
+                              basket.filter((item) => item.quantity !== 0)
+                            )
+                          )
+                      : product.quantity
+                  }
                   onChange={(event) => {
                     fetch(`http://localhost:4000/basket/${product.id}`, {
                       method: "PATCH",
