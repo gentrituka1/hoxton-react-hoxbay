@@ -21,6 +21,7 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/categories/:id" element={<CategoriesItems />} />
           <Route path="/basket" element={<Basket />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </>
