@@ -52,6 +52,7 @@ export function ProductDetails() {
                 })
                 .then(response => response.json())
                 .then(basketItem => setBasket([...basket, basketItem]))
+                .then(() => window.location.reload())
             }}>Add to basket</button>
         </Link>
       </div>
