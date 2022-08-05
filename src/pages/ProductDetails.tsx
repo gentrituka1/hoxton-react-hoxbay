@@ -24,7 +24,7 @@ export function ProductDetails() {
       .then((itemFromServer) => setItem(itemFromServer));
   }, []);
 
-  if (item === null) return <div>Loading...</div>;
+  if (item === null) return <div className="loading">Loading...</div>;
 
   if (item.id === undefined) return <Navigate to="/products" />;
 

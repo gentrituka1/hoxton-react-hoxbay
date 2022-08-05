@@ -304,3 +304,8 @@ img {
   font-weight: bold;
   font-size: 1.5rem;
 }
+.loading{
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}
