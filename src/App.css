@@ -284,3 +284,23 @@ img {
   align-items: center;
   justify-content: space-between;
 }
+.basket-container__total{
+  display: flex;
+  place-content: end;
+}
+.btn-checkout{
+  border: 1px solid grey;
+  width: 150px;
+  transform: translateY(10px);
+  background-color: #0064d3;
+  color: white;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  transition: all 0.5s ease-in-out;
+}
+.btn-checkout:hover{
+  background-color: whitesmoke;
+  color:#0064d3;
+  font-weight: bold;
+  font-size: 1.5rem;
+}

@@ -92,7 +92,18 @@ export function Basket() {
           </li>
         ))}
       </ul>
+      <div className="basket-container__total">
       <h3>Your Total: ${getTotal()}</h3>
+      <button className="btn-checkout" onClick={() => {
+        for(let item of basket) {
+        fetch(`http://localhost:4000/basket/${item.id}`, {
+          method: "DELETE",
+        })
+          .then((response) => response.json())
+          .then(() => setBasket([]));
+      }}}
+      >Checkout</button>
+      </div>
     </div>
   );
 }
